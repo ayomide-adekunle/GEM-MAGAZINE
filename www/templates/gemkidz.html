@@ -1,0 +1,40 @@
+<ion-view view-title="gemKIDZ" style="background:#d9ebb9">
+	<ion-content >
+	
+		<img src="img/gemkidz.jpg" class="home_img" style="margin-top:0px">
+		 
+	<ion-scroll direction="y" style="height: 400px">
+		
+					<div class="list">
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.cartoon">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Cartoons
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.kfinance">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Finance
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.khealth">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Health
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.kstories">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								Stories
+							</button>
+														
+							
+				
+				</div>
+				
+	 </ion-scroll>
+ 
+	</ion-content>
+	<div class="bar bar-footer" ng-controller="AdCtrl" style="background:#007cc2; height:60px !important; border: none !important; padding:0px !important">
+	  <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000" show-pager="false">
+		<ion-slide ng-repeat="n in slides">
+				<img ng-src="{{n.imgurl}}" class="ad_img">
+		</ion-slide>
+		</ion-slide-box>
+	</div>	
+</ion-view>

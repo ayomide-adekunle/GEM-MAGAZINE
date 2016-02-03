@@ -1,0 +1,19 @@
+<ion-view view-title="What's New" >
+  <ion-content>
+	<div class="list" style="margin-bottom: 0px !important; " ng-repeat="playlist in playlists" >
+		<a class="item item-avatar" href="#/app/playlists/{{playlist.ID}}">
+			<img src='http://gemmagazines.net/gemwoman/wp-content/uploads/{{playlist.post_image}}'>
+			<h2 style="white-space: normal !important">{{playlist.post_title}} </h2>
+        </a>
+	</div>
+	<button class="button button-full " style="background:none !important; border:none !important;"></button>
+							<button class="button button-full" style="background:none !important; border:none !important;"></button>
+  </ion-content>
+  <div class="bar bar-footer" ng-controller="AdCtrl" style="background:#007cc2; height:60px !important; border: none !important; padding:0px !important">
+	  <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000" show-pager="false">
+		<ion-slide ng-repeat="n in slides">
+				<img ng-src="{{n.imgurl}}" class="ad_img">
+		</ion-slide>
+		</ion-slide-box>
+	</div>	
+</ion-view>

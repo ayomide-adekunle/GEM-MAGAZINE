@@ -1,0 +1,82 @@
+<ion-view scroll="true">
+	<ion-content>
+
+	    <ion-slide-box does-continue="true" auto-play="true" slide-interval="5000" show-pager="false" style="margin:0px !important">
+			<ion-slide ng-repeat="n in slides">
+				<img ng-src="{{n.imgurl}}" class="mainpage_ad_img">
+			</ion-slide>
+		</ion-slide-box>
+	
+		 <a href="#" class="button button-full bar-gem" style="margin-top:0px !important; margin-bottom:5px !important" onclick="window.open('http://gemmagazines.net/gem_app_apis/makePayment.php', '_self', 'location=yes'); return false;">
+                                           BUY e-EDITION NOW
+                    </a>
+		
+		<ion-scroll direction="y" style="height: 400px">
+
+					<div class="list">
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.gemwoman">
+							<i class="icon ion-ios-arrow-forward"></i>
+								gemWOMAN
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg2" ui-sref="app.gemman">
+							<i class="icon ion-ios-arrow-forward"></i>
+								gemMAN
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg1" ui-sref="app.gemkidz">
+							<i class="icon ion-ios-arrow-forward"></i>
+								gemKIDZ
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg2" ui-sref="app.gemstone">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								gemSTONES CLUB
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg1" ui-sref="app.bss">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Body, Soul & Spirit
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg2" ui-sref="app.singleladies">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Single Ladies Conference
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg1"  ui-sref="app.ghai" >
+							<i class="icon ion-ios-arrow-forward"></i>
+								gHAI
+							</button>
+							
+							<button class="button button-full item-icon-right button-full  button-gem button-gem-bg1 " >
+							
+							</button>
+							<button class="button button-full item-icon-right button-full  button-gem button-gem-bg1" >
+							
+							</button>
+							<!--<button class="button item-icon-right button-full  button-gem button-gem-bg2" ui-sref="app.gemwoman">
+							<i class="icon ion-ios-arrow-forward"></i>
+								gemWOMAN
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg1" ui-sref="app.gemman">
+							<i class="icon ion-ios-arrow-forward"></i>
+								gemMAN
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg2" ui-sref="app.gemkidz">
+							<i class="icon ion-ios-arrow-forward"></i>
+								gemKIDZ
+							</button>
+							<button class="button item-icon-right button-full  button-gem button-gem-bg1" ui-sref="app.gemstone">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								gemSTONES CLUB
+							</button>-->
+							
+							
+				
+				</div>
+
+	</ion-scroll>		
+	</ion-content>
+	<div class="bar bar-footer" ng-controller="AdCtrl" style="background:#007cc2; height:60px !important; border: none !important; padding:0px !important">
+	  <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000" show-pager="false">
+		<ion-slide ng-repeat="n in slides">
+				<img ng-src="{{n.imgurl}}" class="ad_img">
+		</ion-slide>
+		</ion-slide-box>
+	</div>	
+</ion-view>

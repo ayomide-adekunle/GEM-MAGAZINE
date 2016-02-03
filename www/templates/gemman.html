@@ -1,0 +1,85 @@
+<ion-view view-title="gemMAN" style="background:#d9ebb9">
+	<ion-content >
+	
+		<img src="img/gemman.jpg" class="home_img" style="margin-top:0px">
+		 
+	<ion-scroll direction="y" style="height: 400px">
+		
+					<div class="list">
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.autos">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Autos
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.emotional-iq">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Emotional IQ
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.mfashion">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Fashion
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.fatherhood">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								Fatherhood
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.mfinance">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Finance
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.mhealth">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Health
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.minspiration">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Inspiration
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2"  ui-sref="app.mlifestyle">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Lifestyle
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.mrealtalk">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Real Talk
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.mrelationship">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Relationships
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.sport">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								Sport
+							</button>
+							<button class="button button-full item-icon-right button-full  button-gem button-gem-bg1 " >
+							
+							</button>
+							<button class="button button-full item-icon-right button-full  button-gem button-gem-bg1" >
+							
+							</button>
+							<!--<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.autos">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Autos
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.emotional-iq">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Emotional IQ
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.mfashion">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Fashion
+							</button>-->
+							
+							
+				
+				</div>
+			
+	 </ion-scroll>		
+	</ion-content>
+	<div class="bar bar-footer" ng-controller="AdCtrl" style="background:#007cc2; height:60px !important; border: none !important; padding:0px !important">
+	  <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000" show-pager="false">
+		<ion-slide ng-repeat="n in slides">
+				<img ng-src="{{n.imgurl}}" class="ad_img">
+		</ion-slide>
+		</ion-slide-box>
+	</div>	
+</ion-view>

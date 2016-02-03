@@ -1,0 +1,11 @@
+<ion-view view-title="Playlists" >
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.ID}}">
+        {{playlist.post_title}} <br>
+		<img src='http://gemmagazines.net/gemwoman/wp-content/uploads/{{playlist.post_image}}' style="width:100%;"/>	
+      </ion-item>
+    </ion-list>
+	<div style="margin:50px"></div>
+  </ion-content>
+</ion-view>

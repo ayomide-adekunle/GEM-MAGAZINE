@@ -1,0 +1,31 @@
+<ion-view view-title="Single Ladies Conference" style="background:#fff; text-align: justify;">
+	<ion-content >
+	
+		<img src="img/single.jpg" class="home_img">
+		 
+	 <ion-scroll direction="y" style="height: 400px">
+	
+		<div style="padding:5px 10px 5px 10px; margin-bottom:200px">
+			<h4>Why on earth are you still single?</h4>
+<p>Yeah, got your attention with the question, right? It's deliberate! We're not about to proffer some magic formula or list all the things you're not doing right. What we desire above all else is- to connect you with grace and help fortify you with the supernatural wisdom and strength needed to fulfil your destiny- maritally and all-round.</p>
+<p>It's time to regain a healthy self-image, regardless of what has gone wrong in the past.</p>
+<p>It's time to uncover underlying pain and find healing</p>
+<p>It's time to move from merely existing to truly living.</p>
+<p>It's time to gain the confidence to maximise your potential, regardless of your marital status</p>
+<p>It's time to discover what truly works- for marriage, career, fulfilled living, etc.?</p>
+
+  
+
+</div><button class="button button-full " style="background:none !important; border:none !important;"></button>
+							<button class="button button-full" style="background:none !important; border:none !important;"></button>
+		 </ion-scroll>	
+	 
+	</ion-content>
+	<div class="bar bar-footer" ng-controller="AdCtrl" style="background:#007cc2; height:60px !important; border: none !important; padding:0px !important">
+	  <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000" show-pager="false">
+		<ion-slide ng-repeat="n in slides">
+				<img ng-src="{{n.imgurl}}" class="ad_img">
+		</ion-slide>
+		</ion-slide-box>
+	</div>	
+</ion-view>

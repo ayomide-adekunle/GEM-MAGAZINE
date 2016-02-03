@@ -1,0 +1,10 @@
+<ion-view view-title="gemKIDZ" >
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/kplaylists/{{playlist.ID}}">
+        {{playlist.post_title}} <br>
+		<img src='http://gemmagazines.net/gemkidz/wp-content/uploads/{{playlist.post_image}}' style="width:100%;"/>	
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

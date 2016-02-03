@@ -1,0 +1,56 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-gem bar-gem-color">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    
+    <ion-content  scroll="true">
+	
+    <img src="img/gem-logo.jpg" style="padding:20px 10px 20px 10px">
+   <ion-scroll direction="y" style="height: 500px">
+      <ion-list>
+        <ion-item menu-close ui-sref="home">
+        Home
+        </ion-item>
+        <ion-item menu-close ui-sref="app.gemwoman">
+          gemWOMAN
+        </ion-item>
+        <ion-item menu-close ui-sref="app.gemman">
+          gemMAN
+        </ion-item>
+        <ion-item menu-close ui-sref="app.gemkidz">
+          gemKIDZ
+        </ion-item>
+        <ion-item menu-close ui-sref="app.gemstone">
+          gemSTONES CLUB
+        </ion-item>
+        <ion-item menu-close ui-sref="app.singleladies">
+          Single Ladies Conference
+        </ion-item>
+        <ion-item menu-close ui-sref="app.bss">
+          Body, Soul & Spirit
+        </ion-item>
+        <ion-item menu-close ui-sref="app.ghai">
+          gHAI
+        </ion-item>
+        <ion-item menu-close ui-sref="app.publisher">
+          The Publisher
+        </ion-item>
+        <ion-item menu-close ui-sref="app.contact">
+          Contact Us
+        </ion-item>
+      </ion-list>
+	   </ion-scroll>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,118 @@
+<ion-view view-title="gemWOMAN" style="background:#d9ebb9">
+	<ion-content >
+	
+		<img src="img/gemwoman.jpg" class="home_img" style="margin-top:0px">
+		 
+	<ion-scroll direction="y" style="height: 400px">
+		
+					<div class="list">
+					<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.whats_new">
+							<i class="icon ion-ios-arrow-forward"></i>
+								What's New
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.auntykk">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Aunty KK
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.beauty">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Beauty
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.career">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Career
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.controversial">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								Controversial
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.entertainment">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Entertainment
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.fashion">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Fashion
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.finance">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Finance
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2"  ui-sref="app.food">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Food
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.health_fitness">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Health & Fitness
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.home_you" >
+							<i class="icon ion-ios-arrow-forward"></i>
+								Home & You
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.lifestyle">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								LifeStyle
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.light_reflections">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Light reflections
+							</button>
+							
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.motivational">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Motivational
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.parenting">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Parenting
+							</button>
+							
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.wisdom_series">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								Wisdom Series
+							</button>
+							<button class="button button-full item-icon-right button-full  button-gem button-gem-bg1 " >
+							
+							</button>
+							<button class="button button-full item-icon-right button-full  button-gem button-gem-bg1" >
+							
+							</button>
+							<button class="button button-full item-icon-right button-full  button-gem button-gem-bg1" >
+							
+							</button>
+							<!--<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.auntykk">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Aunty KK
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.beauty">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Beauty
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.career">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Career
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg1" ui-sref="app.controversial">
+							<i class="icon ion-ios-arrow-forward"></i>		
+								Controversial
+							</button>
+							<button class="button item-icon-right button-full button-gem button-gem-bg2" ui-sref="app.entertainment">
+							<i class="icon ion-ios-arrow-forward"></i>
+								Entertainment
+							</button>-->
+							
+				
+				</div>
+				
+						
+	 </ion-scroll>		
+	</ion-content>
+	<div class="bar bar-footer" ng-controller="AdCtrl" style="background:#007cc2; height:60px !important; border: none !important; padding:0px !important">
+	  <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000" show-pager="false">
+		<ion-slide ng-repeat="n in slides">
+				<img ng-src="{{n.imgurl}}" class="ad_img">
+		</ion-slide>
+		</ion-slide-box>
+	</div>	
+</ion-view>
