@@ -2,9 +2,64 @@
   <ion-content>
    <div style="margin-bottom:100px;">
         <img ng-src='{{play.thumbnail_images.full.url}}' style="width:100%;"/><br>
+       <a ng-click="share()" class="search"
+               >
+           <i style="font-size: x-large;color: white;margin-left: 1px;margin-top: 20px;" class="ion-android-share-alt"></i>
+       </a>
 		<h3 style="padding: 0 10px 0 10px; color:#2a4304;">{{post.title}}</h3>
 		<div style="padding: 0 10px 0px 10px; margin-bottom:100px !important; text-align: justify;  text-justify: inter-word;" ng-bind-html="play.content"></div>
       </div>
+       <div class="item tabs tabs-secondary tabs-icon-left" >
+      <a class="tab-item" ng-click="comment = true" style="font-weight: bold">
+        <i class="icon ion-chatbox" ></i>
+        Make Comment
+      </a>
+    </div>
+    <div  class="item item-body" ng-if="comment">
+        <i  style="color:#ff5252;margin-right: 10px" class="ion-information-circled"></i>Submit new comment<br/>
+         <form 
+            name="myform" ng-submit="createComment('gemkidz', user, play.id)" 
+            novalidate
+            >
+            <input 
+              type="text" placeholder="Enter Name" 
+              name="name"
+              ng-model="user.name" required
+            />
+            <p 
+              class="error validationerror" 
+              ng-show="myform.name.$invalid && myform.name.$touched"
+              >
+              Name is required
+            </p>
+            <input 
+              type="email" placeholder="Your Email"  
+              ng-model="user.email" name = "email"
+              required
+           />
+           <p 
+              class="error validationerror" 
+              ng-show="myform.email.$invalid && myform.email.$touched"
+              >
+              Email is required
+           </p>
+            <label class="item item-input">
+                <textarea 
+                    placeholder="Comment here" name="comment" rows="3" ng-required="true" ng-model="user.comment">
+                </textarea>
+            </label>
+            <p 
+              class="error validationerror" 
+              ng-show="myform.comment.$invalid && myform.comment.$touched"
+              >
+              comment is required
+           </p>
+            <button 
+                type="submit" class="btn" ng-disabled="myform.$invalid">
+                Comment
+            </button>
+        </form>
+    </div>
     <button class="button button-full " style="background:none !important; border:none !important;"></button>
 		<button class="button button-full" style="background:none !important; border:none !important;"></button>
   </ion-content>

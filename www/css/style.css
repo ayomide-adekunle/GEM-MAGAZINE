@@ -74,3 +74,17 @@
 	
    white-space: normal !important;
 }
+.search
+{
+    float: right;
+    right: 25px;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    margin-top: -35px;
+    position:fixed;
+    border-radius:80px;
+    margin-right:-20px;
+    background:#007cc2 !important;
+    border-radius:80px;
+}

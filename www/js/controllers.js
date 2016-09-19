@@ -12,6 +12,15 @@ angular.module('gemApp.controllers', ['ngCordova'])
   // Form data for the login modal
   $scope.loginData = {};
 
+  $scope.createComment = function(part, user, postId) {
+  	url ="http://gemmagazines.net/"+part+"/api/respond/submit_comment/?post_id="+postId+"&name="+user.name+"&email="+user.email+"&content="+user.comment;
+  	console.log(url);	
+  	$http.get(url)
+  	.success(
+  		function(response) {
+  			alert(response.status);
+  		});
+  };
   // Create the login modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
@@ -51,7 +60,9 @@ angular.module('gemApp.controllers', ['ngCordova'])
 	});
  
   $http.get("http://gemmagazines.net/gemman/gem_app_apis/fatherhood.php")
-		.success(function (response){$scope.playlists = response.posts; $ionicLoading.hide()});
+		.success(
+			function (response){
+				$scope.playlists = response.posts; $ionicLoading.hide()});
 	//$ionicLoading.hide();	
 })
 .controller('SportCtrl', function($scope,$http, $ionicLoading) {
@@ -458,7 +469,7 @@ angular.module('gemApp.controllers', ['ngCordova'])
 	$ionicLoading.show({
 	    //template: 'LOADING CONTENT <br> this depends on your internet connectivity <br> please wait...',
 	    animation: 'fade-in',
-	    showBackdrop: true,
+	    showBackdrop: true
 	});
 	/* setTimeout(function () {
 		$scope.$apply(function () {
@@ -485,7 +496,7 @@ angular.module('gemApp.controllers', ['ngCordova'])
 		
 })
 
-.controller('KPlaylistCtrl', function($scope,$http, $stateParams, $ionicLoading) {
+.controller('KPlaylistCtrl', function($scope,$http, $stateParams, $ionicLoading,$cordovaSocialSharing) {
 	$ionicLoading.show({
 	    template: 'Loading...please wait',
 	    animation: 'fade-in',
@@ -499,8 +510,11 @@ angular.module('gemApp.controllers', ['ngCordova'])
 			$scope.play = response.post;
 			$ionicLoading.hide();
 		});
+        $scope.share = function() {
+            $cordovaSocialSharing.share($scope.play.slug,"GEM",null,$scope.play.url);
+        }
 })
-.controller('MPlaylistCtrl', function($scope,$http, $stateParams, $ionicLoading) {
+.controller('MPlaylistCtrl', function($scope,$http, $stateParams, $ionicLoading,$cordovaSocialSharing) {
 	$ionicLoading.show({
 	    template: 'Loading...please wait',
 	    animation: 'fade-in',
@@ -514,9 +528,12 @@ angular.module('gemApp.controllers', ['ngCordova'])
 			$scope.play = response.post; 
 			$ionicLoading.hide();
 		});
+        $scope.share = function() {
+            $cordovaSocialSharing.share($scope.play.slug,"GEM",null,$scope.play.url);
+        }
 		//alert($scope.play);
 })
-.controller('PlaylistCtrl', function($scope,$http, $stateParams, $ionicLoading) {
+.controller('PlaylistCtrl', function($scope,$http, $stateParams, $ionicLoading,$cordovaSocialSharing) {
 	$ionicLoading.show({
 	    template: 'Loading...please wait',
 	    animation: 'fade-in',
@@ -525,36 +542,45 @@ angular.module('gemApp.controllers', ['ngCordova'])
 	    showDelay: 500
 	});
 	
+	$scope.comment = false;
 	$http.get("http://gemmagazines.net/gemwoman/api/get_post/?id="+$stateParams.playlistId)
+		
 		.success(function (response) {
 			$scope.play = response.post; 
-			$ionicLoading.hide()
+			$ionicLoading.hide();
 		});
-		//alert($scope.play);
+
+     $scope.share = function() {
+            $cordovaSocialSharing.share($scope.play.slug,"GEM",null,$scope.play.url);
+      };
 })
 
 .controller('HomeCtrl', function($scope,$http) {
 	
 	$scope.slides = [
+				{ imgurl: "img/sinach.png"},
 				{ imgurl: "img/woman1.jpg" },
 				{ imgurl: "img/man1.jpg"}
+				
 			  ];
 	
 })
 .controller('AdCtrl', function($scope,$http) {
 	
 	$scope.slides = [
-					{ imgurl: "img/mtn.jpg" },
+					{ imgurl: "img/etisalat_f.png" },
 					{ imgurl: "img/fcmb.jpg" },
-					{ imgurl: "img/crown.jpg" }
+					{ imgurl: "img/crown.jpg" },
+
 				 ];
 })
 .controller('mainpageCtrl', function($scope,$http) {
 	
 	$scope.slides = [
-					{ imgurl: "img/mainmtn.jpg" },
+					{ imgurl: "img/etisalat.png" },
 					{ imgurl: "img/mainfcmb.jpg" },
-					{ imgurl: "img/mainknorr.jpg" }
+					{ imgurl: "img/mainknorr.jpg" },
+					
 					
 				 ];
 })
